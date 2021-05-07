@@ -18,12 +18,5 @@ pipeline {
     } 
     
     
-    stage('Package') {
-      steps {
-         sh 'ls -lrt'
-         sh "pwd"
-         sh "tar -zcf build.tar.gz build/"
-      }
-    }    
   }
 }
