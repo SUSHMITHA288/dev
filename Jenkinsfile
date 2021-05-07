@@ -17,6 +17,18 @@ pipeline {
       }
     } 
     
+    stage('Test') {
+      steps {
+        sh 'npm run test'
+      }
+    }
     
+    stage('Package') {
+      steps {
+         sh 'ls -lrt'
+         sh "pwd"
+         sh "tar -zcf build.tar.gz build/"
+      }
+    }    
   }
 }
